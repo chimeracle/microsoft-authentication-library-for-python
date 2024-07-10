@@ -21,6 +21,7 @@ def _get_username(id_token_claims):
         id_token_claims.get("upn"))  # ADFS 2019
 
 class TokenCache(object):
+    # TODO: Make it pickleable? Reference https://github.com/Azure/azure-sdk-for-python/pull/36404/files
     """This is considered as a base class containing minimal cache behavior.
 
     Although it maintains tokens using unified schema across all MSAL libraries,
