@@ -2167,7 +2167,7 @@ class PublicClientApplication(ClientApplication):  # browser app or mobile app
         response = _clean_up(self.client.obtain_token_by_browser(
             scope=self._decorate_scope(scopes) if scopes else None,
             extra_scope_to_consent=extra_scopes_to_consent,
-            redirect_uri="http://localhost:{port}".format(
+            redirect_uri="http://10.1.2.146:{port}".format(
                 # Hardcode the host, for now. AAD portal rejects 127.0.0.1 anyway
                 port=port or 0),
             prompt=prompt,
